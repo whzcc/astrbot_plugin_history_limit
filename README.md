@@ -1,9 +1,1 @@
-# helloworld
-
-AstrBot 插件模板
-
-A template plugin for AstrBot plugin feature
-
-# 支持
-
-[帮助文档](https://astrbot.app)
+调用llm时，限制上文长度，过长时则删除较早内容
