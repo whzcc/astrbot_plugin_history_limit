@@ -12,8 +12,8 @@ class Main(Star):
 
     @filter.on_llm_request()
     async def history_limit(self, event: AstrMessageEvent, req: ProviderRequest): # 请注意有三个参数
-        if "清除上下文" in req.prompt:
-            req.contexts = [] 
+        if "清除上下文" in req.prompt or "清空上下文" in req.prompt:
+            req.contexts = []
         if len(req.contexts) >= 20:
             req.contexts.pop(0)
             req.contexts.pop(0)
