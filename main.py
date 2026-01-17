@@ -14,6 +14,7 @@ class Main(Star):
     async def history_limit(self, event: AstrMessageEvent, req: ProviderRequest): # 请注意有三个参数
         if "清除上下文" in req.prompt or "清空上下文" in req.prompt:
             req.contexts = []
+            req.prompt = []
             logger.info("已清除。")
         # 以下弃用，请使用官方提供的功能
         # if len(req.contexts) >= 20:
